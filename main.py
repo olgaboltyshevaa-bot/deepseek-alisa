@@ -27,7 +27,7 @@ async def main(request: Request):
     payload = {
         "model": "deepseek-chat",
         "messages": [{"role": "user", "content": user_message}],
-        "max_tokens": 100
+        "max_tokens": 50
     }
 
     try:
