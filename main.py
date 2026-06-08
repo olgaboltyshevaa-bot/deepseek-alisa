@@ -14,10 +14,10 @@ async def main(request: Request):
         data = await request.json()
         user_message = data.get("request", {}).get("command", "")
     except Exception as e:
-        return {"response": {"text": f"Ошибка чтения запроса: {str(e)}", "end_session": False}}
+        return {"response": {"text": f"Ошибка чтения запроса: {str(e)}", "end_session": False}, "version": "1.0"}
 
     if not user_message:
-        return {"response": {"text": "Вы ничего не сказали. Повторите, пожалуйста.", "end_session": False}}
+        return {"response": {"text": "Вы ничего не сказали. Повторите, пожалуйста.", "end_session": False}, "version": "1.0"}}
 
     # Формируем запрос к DeepSeek
     headers = {
