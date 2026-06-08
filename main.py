@@ -47,7 +47,7 @@ async def main(request: Request):
     except Exception as e:
         answer = f"Техническая ошибка при обращении к DeepSeek: {str(e)}"
 
-    return {"response": {"text": answer, "end_session": False}}
+    return {"response": {"text": answer, "end_session": False}, "version": "1.0"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=10000)
