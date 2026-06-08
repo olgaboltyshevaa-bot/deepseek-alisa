@@ -17,7 +17,7 @@ async def main(request: Request):
         return {"response": {"text": f"Ошибка чтения запроса: {str(e)}", "end_session": False}, "version": "1.0"}
 
     if not user_message:
-        return {"response": {"text": "Вы ничего не сказали. Повторите, пожалуйста.", "end_session": False}, "version": "1.0"}}
+        return {"response": {"text": "Вы ничего не сказали. Повторите, пожалуйста.", "end_session": False}, "version": "1.0"}
 
     # Формируем запрос к DeepSeek
     headers = {
